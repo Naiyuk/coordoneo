@@ -1,0 +1,41 @@
+<h1>Coordoneo</h1>
+<h2>Pré-Requis</h2>
+<ul>
+    <li>Php 7</li>
+    <li>Mysql</li>
+    <li>Apache</li>
+</ul>
+<h2>Librairies</h2>
+<ul>
+    <li>Bootstrap</li>
+    <li>JQuery</li>
+</ul>
+<h2>Dépendances</h2>
+<ul>
+    <li>PHP-DI</li>
+    <li>Twig</li>
+    <li>ReCaptcha</li>
+</ul>
+<h2>Installation</h2>
+<h4>Installer les dépendances</h4>
+<pre>composer install</pre>
+<h4>Configuration</h4>
+<p>Editer le fichier <strong>config.php</strong> se trouvant dans le répertoire /web. Modifier les valeurs en lien avec la base de données par les vôtres (l5, l6, l7, l8)</p>
+<h4>Créer la base de données</h4>
+<p>Pour créer la base de données et les tables, utiliser le fichier <strong>donnees.sql</strong> situait à la racine du projet, via votre logiciel de gestion de bdd MySql ou simplement via la commande MySql</p>
+<pre>SOURCE donnees.sql</pre>
+<p>Ce fichier comprend aussi des données fictives pour la démo</p>
+<h2>Configuration serveur</h2>
+<h4>Htaccess</h4>
+<p>S'il n'est pas déjà présent, créer un fichier .htaccess dans le répertoire /web comme ci-dessous</p>
+<p>
+    RewriteEngine On<br />
+    <br />
+    RewriteCond %{REQUEST_FILENAME} !-f<br />
+    <br />
+    RewriteRule ^(.*)$ app.php [QSA,L]
+</p>
+<h4>Apache</h4>
+<p>Pour le serveur web, j'ai créé un fichier de Virtual host qui "redirige" dans le répertoire /web du projet</p>
+<h2>Lancer l'application !</h2>
+<p>Après avoir fait la configuration serveur, pour pouvez-vous rendre sur l'url votreDomaine/</p>

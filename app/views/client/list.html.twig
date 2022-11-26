@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} Administration{% endblock %}
+
+{% block body %}
+    <div class="container" id="wrap">
+        <div class="row" id="main">
+            <div class="col-lg-12 mx-auto table-responsive">
+                {% if clients is not empty %}
+                    <table class="table bg-white rounded">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Adresse</th>
+                            <th scope="col">Code postal</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Pays</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for client in clients %}
+                                <tr class="client-container">
+                                    <td>{{ client.name }}</td>
+                                    <td>{{ client.firstName }}</td>
+                                    <td>{{ client.address }}</td>
+                                    <td>{{ client.postalCode }}</td>
+                                    <td>{{ client.city }}</td>
+                                    <td>{{ client.country}}</td>
+                                    <td>{{ client.email }}</td>
+                                    <td>
+                                        <a class="edit-client-link mx-1" href="/clients/{{ client.id }}/edit"><img src="img/edit.png" alt="Edit icon" /></a>
+                                        <a class="delete-client-link mx-1" href="/api/clients/{{ client.id }}/delete"><img src="img/delete.png" alt="Delete icon" /></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <div id="loadMoreClientsContainer" class="d-flex justify-content-center">
+                        <button id="loadMoreClients" class="btn btn-primary mb-4 mt-3">Voir plus</button>
+                    </div>
+                {% else %}
+                    <h1 class="text-center text-white">Aucun client à afficher</h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="js/list_client"></script>
+{% endblock %}

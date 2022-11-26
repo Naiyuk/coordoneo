@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} Home{% endblock %}
+
+{% block body %}
+    <section id="mainSection">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div class="mx-auto" id="homeInfos">
+                        <h1 class="mb-4">Bienvenue sur Coordoneo, l'appli pour enregistrer vos coordonnées !</h1>
+                        <a href="/clients/add" class="btn btn-outline btn-xl">C'est parti !</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto phone-col">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6">
+                            <div class="device">
+                                <div class="screen">
+                                    <img src="/img/screen.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

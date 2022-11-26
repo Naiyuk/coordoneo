@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<routes>
+    <route url="/" controller="App\Controller\GlobalController" action="homeAction" name="home" />
+    <route url="/login" controller="App\Controller\SecurityController" action="loginAction" name="login" />
+    <route url="/logout" controller="App\Controller\SecurityController" action="logoutAction" name="logout" />
+    <route url="/clients" controller="App\Controller\ClientController" action="listAction" name="client_list" />
+    <route url="/clients/add" controller="App\Controller\ClientController" action="addAction" name="client_add" />
+    <route url="/clients/([0-9]+)/edit" controller="App\Controller\ClientController" action="editAction" name="client_edit" mask="/clients/(id)/edit" vars="id" />
+    <route url="/api/clients/([0-9]+)/delete" controller="App\Controller\ClientApiController" action="deleteAction" name="client_api_delete" mask="/api/clients/(id)/delete" vars="id" />
+    <route url="/api/clients/([0-9]+)" controller="App\Controller\ClientApiController" action="listAction" name="client_api_list" vars="page" />
+</routes>

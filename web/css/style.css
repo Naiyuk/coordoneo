@@ -1,0 +1,209 @@
+/*!
+ * Start Bootstrap - New Age v5.0.7 (https://startbootstrap.com/template-overviews/new-age)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
+ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+ 
+body {
+    font-family: 'sans-serif';
+    background: url("../img/bg-pattern.png"), #7b4397;
+    background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
+}
+
+#wrap {
+    min-height: 100%;
+    overflow: auto;
+}
+
+#main {
+    overflow: auto;
+    padding-top: 150px;
+    padding-bottom: 60px;
+}
+ 
+a {
+    color: #fdcc52;
+    transition: all .35s;
+}
+ 
+a:hover, a:focus {
+    color: #fdcc52;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+ 
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+ 
+#mainNav {
+    border-color: rgba(34, 34, 34, 0.05);
+    background-color: white;
+    transition: all .35s;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 200;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+ 
+#mainNav .navbar-nav > li > a, #mainNav .navbar-nav > li > a:focus {
+    color: #222222;
+}
+ 
+#mainNav .navbar-nav > li > a:hover, #mainNav .navbar-nav > li > a:focus:hover {
+    color: #fdcc52;
+}
+ 
+#mainSection {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+#homeInfos {
+    max-width: 500px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+ 
+#homeInfos h1 {
+    font-size: 1.5em;
+}
+ 
+#mainSection .device-container {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+#mainSection .device-container .screen img {
+    border-radius: 3px;
+}
+ 
+@media (min-width: 992px) {
+    #mainSection {
+        height: 100vh;
+        min-height: 775px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #homeInfos {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    #homeInfos h1 {
+        font-size: 2em;
+    }
+
+    #mainSection .device-container {
+        max-width: 325px;
+    }
+
+    .phone-col {
+        padding-top: 100px;
+    }
+}
+
+form {
+    border-radius: 50px;
+    background-color: white;
+}
+
+.form-control {
+    border: 1px solid grey;
+}
+ 
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #222222;
+}
+ 
+footer p {
+    font-size: 12px;
+    margin: 0;
+}
+ 
+.btn-outline {
+    color: white;
+    border: 1px solid;
+    border-color: white;
+}
+ 
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    color: white;
+    border-color: #fdcc52;
+    background-color: #fdcc52;
+}
+ 
+.btn {
+    border-radius: 300px;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+ 
+.btn-xl {
+    font-size: 11px;
+    padding: 15px 45px;
+}
+ 
+.device-mockup {
+    position: relative;
+    width: 100%;
+    padding-bottom: 61.775701%;
+}
+ 
+.device-mockup > .device > .screen {
+    position: absolute;
+    top:    11.0438729%;
+    bottom: 14.6747352%;
+    left:   13.364486%;
+    right:  13.364486%;
+    overflow: hidden;
+}
+ 
+.device-mockup > .device > .button {
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+    overflow: hidden;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    cursor: pointer;
+}
+
+.device-mockup.iphone6 > .device {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%; height: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/iphone.png");
+}
+ 
+.device-mockup.iphone6 > .device > .screen {
+    top: 12.58%; bottom: 12.88%; left: 6.77%; right: 6.77%;
+}
+ 
+.device-mockup.iphone6 {
+    padding-bottom: 207.19%;
+}

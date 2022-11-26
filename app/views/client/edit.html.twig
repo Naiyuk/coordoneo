@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ parent() }} Edition client{% endblock %}
+{% import 'macros/_form_elements.html.twig' as formElements %}
+
+{% block body %}
+    <div class="container" id="wrap">
+        <div class="row" id="main">
+            <div class="col-lg-6 mx-auto">
+                <form action="" method="post" class="mx-auto py-2 px-5" id="clientForm">
+                    <h1 class="text-center text-dark mb-5 font-weight-bold mt-4">Edition</h1>
+                        {{ form | raw }}
+                    <div class="d-flex flex-column align-items-center">
+                        {{ formElements.recaptcha('g-recaptcha mt-1') }}
+                        <button id="clientFormBtn" type="submit" class="btn btn-primary my-3">Modifier</button>
+                    </div>                 
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="/js/manage_client.js"></script>
+{% endblock %}
